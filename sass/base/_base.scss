@@ -15,4 +15,6 @@ body {
 }
 
 ::selection {
+  background-color: $color-text-white;
+  color: $color-primary;
 }

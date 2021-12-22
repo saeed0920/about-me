@@ -1,0 +1,37 @@
+.navbar {
+  grid-column: col-end 5 / center-end;
+  margin: auto 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .active::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.2s;
+
+    &::after {
+      margin-top: 1rem;
+      display: block;
+      content: "";
+      border-bottom: 1px solid $color-secondary;
+      transform: scaleX(0);
+      transition: all 0.2s;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-text-white;
+    font-size: 1.4rem;
+  }
+}

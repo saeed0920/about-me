@@ -1,1 +1,24 @@
 /* animation */
+@keyframes ani__left-to-right {
+  0% {
+    transform: translateX(-8rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ani__right-to-left {
+  0% {
+    transform: translateX(8rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
