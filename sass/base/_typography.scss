@@ -64,7 +64,7 @@
 }
 
 %heading {
-  font-family: sans-serif;
+  font-family: $font-primary;
   font-weight: 600;
 }
 
@@ -81,6 +81,7 @@
 }
 
 .text--1 {
+  font-family: $font-secondary;
   font-size: 1.4rem;
   color: $color-text-white;
 }
