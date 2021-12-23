@@ -5,15 +5,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 2fr;
+  border-radius: 4px;
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary, 0.9),
-      rgba($color-primary-daek, 1)
+      rgba($color-primary, 0.4),
+      rgba($color-primary-daek, 0.9)
     ),
     url(../../img/img-key.jpg);
   background-size: cover;
-  border-radius: 4px;
-
+  // opacity: 0.5;
+  border-radius: 10rem;
   &__h1 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -23,7 +24,7 @@
     span {
       margin-left: 4rem;
     }
-    animation: ani__left-to-right 1.3s;
+    animation: ani__right-to-left 1.3s;
   }
   &__h2 {
     grid-column: 1 / 2;
@@ -32,7 +33,7 @@
     color: $color-grey-light-2;
 
     justify-self: center;
-    animation: ani__right-to-left 1.3s;
+    animation: ani__left-to-right 1.3s;
   }
 
   &__text--1 {
@@ -42,8 +43,5 @@
     margin-top: 10rem;
     justify-self: center;
     animation: ani__right-to-left 1.3s;
-  }
-  &__img {
-    width: 100%;
   }
 }
