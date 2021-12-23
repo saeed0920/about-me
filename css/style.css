@@ -55,7 +55,7 @@ big-desktop
   background-color: rgba(255, 255, 255, 0.03);
   display: grid;
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
-  grid-template-rows: min-content 80vh;
+  grid-template-rows: min-content 80vh min-content;
   padding: 2rem; }
 
 .logo {
@@ -70,6 +70,10 @@ big-desktop
     width: 4rem;
     height: 4rem; }
 
+.heading--1, .heading--2, .heading--3 {
+  font-family: "opan sans", serif;
+  font-weight: 600; }
+
 .heading--1 {
   font-size: 6rem;
   line-height: 1; }
@@ -80,7 +84,14 @@ big-desktop
 .text--1 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.4rem;
-  color: #f7f7f769; }
+  color: #f7f7f769;
+  font-weight: 300; }
+
+.text--2 {
+  font-size: 1.6rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 300;
+  color: #f9f7f6; }
 
 *,
 *::after,
@@ -245,3 +256,50 @@ body {
     text-decoration: none;
     color: #f7f7f769;
     font-size: 1.4rem; }
+
+.features {
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: minmax(4rem, 1fr) [story-start] repeat(4, [col-start] minmax(min-content, 26rem) [col-end]) [story-end] minmax(4rem, 1fr);
+  margin-top: 8rem; }
+  .features .story {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    padding: 1rem;
+    align-items: center; }
+    .features .story__pic {
+      overflow: hidden;
+      width: 12rem;
+      height: 12rem;
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      float: left; }
+      .features .story__pic-1, .features .story__pic-3 {
+        grid-column: 1 / 2; }
+      .features .story__pic-2, .features .story__pic-4 {
+        grid-column: 3 / 4; }
+    .features .story-1, .features .story-3 {
+      grid-row: 1 / 2;
+      grid-column: story-start / col-end 2; }
+    .features .story-2, .features .story-4 {
+      grid-row: 2 / 3;
+      grid-column: col-start 3 / story-end; }
+    .features .story-3 {
+      grid-row: 3 / 4; }
+    .features .story-4 {
+      grid-row: 4 / 5; }
+    .features .story__text-1 {
+      grid-column: 2 / span 2; }
+    .features .story__text-2 {
+      grid-row: 1 /2;
+      grid-column: 1 / span 2; }
+  .features__img {
+    width: 100%; }
+  .features__text--2 {
+    grid-column: 2 / 3; }
+    .features__text--2 h3 {
+      justify-self: end; }
+  .features__h3 {
+    grid-column: 2 / 3; }
