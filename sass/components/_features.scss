@@ -11,6 +11,11 @@
   margin-top: 8rem;
   .story {
     padding: 1rem;
+    transition: all 0.2s;
+    &:hover {
+      box-shadow: 0 2rem 3rem rgba($color-black, 0.15);
+      transform: translateY(-3px) scale(1.05);
+    }
     &__pic {
       overflow: hidden;
       width: 12rem;

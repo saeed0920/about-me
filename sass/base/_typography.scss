@@ -30,8 +30,8 @@
 
   border-radius: 2rem;
   box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
-  backdrop-filter: blur(10px);
-  background-color: rgba($color-white, 0.03);
+  // backdrop-filter: blur(10px);
+  background-color: rgba($color-white, 0.01);
   display: grid;
   grid-template-columns:
     [full-start] minmax(2rem, 1fr) [center-start] repeat(

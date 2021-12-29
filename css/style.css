@@ -51,8 +51,7 @@ big-desktop
   grid-column: center-start / center-end;
   border-radius: 2rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.01);
   display: grid;
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-rows: min-content 80vh min-content 50vh;
@@ -145,6 +144,34 @@ body {
 ::selection {
   background-color: #f7f7f769;
   color: #2f2f2f; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* button */
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px; }
+
+/* Handle on hover */
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000; }
+
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+  background: #000; 
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: #999; }
+
+/* Resizer */
+::-webkit-resizer {
+  background: #111; }
 
 /* uniti css */
 .font-sml {
@@ -302,7 +329,11 @@ body {
   grid-template-columns: minmax(4rem, 1fr) [story-start] repeat(4, [col-start] minmax(min-content, 26rem) [col-end]) [story-end] minmax(4rem, 1fr);
   margin-top: 8rem; }
   .features .story {
-    padding: 1rem; }
+    padding: 1rem;
+    transition: all 0.2s; }
+    .features .story:hover {
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px) scale(1.05); }
     .features .story__pic {
       overflow: hidden;
       width: 12rem;
