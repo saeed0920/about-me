@@ -7,7 +7,7 @@
       [col-start] minmax(min-content, 15rem) [col-end]
     )
     [center-end] 1fr [full-end];
-
+  grid-template-rows: min-content 40rem;
   background: linear-gradient(
       to right bottom,
       $color-primary,
